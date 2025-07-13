@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italia Larios | Soft Life Glam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #faf6f2;
+            color: #5a4a42;
+        }
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .allura {
+            font-family: 'Allura', cursive;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8e3e3 0%, #f5f0eb 100%);
+        }
+        .gradient-bg-reverse {
+            background: linear-gradient(135deg, #f5f0eb 0%, #f8e3e3 100%);
+        }
+        .champagne-bg {
+            background-color: #f3e9d2;
+        }
+        .glow-shadow {
+            box-shadow: 0 4px 20px rgba(234, 182, 182, 0.3);
+        }
+        .hero-overlay {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+        }
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .instagram-post {
+            transition: all 0.3s ease;
+        }
+        .instagram-post:hover {
+            transform: translateY(-5px);
+        }
+        .contact-input {
+            background-color: rgba(255, 255, 255, 0.7);
+            border: 1px solid #e8d9c5;
+        }
+        .contact-input:focus {
+            outline: none;
+            border-color: #d4b483;
+            box-shadow: 0 0 0 3px rgba(212, 180, 131, 0.2);
+        }
+        
+        /* Animated Text Reveal Effect */
+        .animated-text {
+            background: 50% 100% / 50% 50% no-repeat 
+                        radial-gradient(ellipse at bottom, #be185d, transparent, transparent);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-family: "Allura", sans-serif;
+            animation: reveal 3000ms ease-in-out forwards 200ms, 
+                       glow 2500ms linear infinite 2000ms;
+        }
+        
+        @keyframes reveal {
+            80% {
+                letter-spacing: 8px;
+            }
+            100% {
+                background-size: 300% 300%;
+            }
+        }
+        
+        @keyframes glow {
+            40% {
+                text-shadow: 0 0 8px #be185d;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="gradient-bg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="allura text-3xl text-rose-800">wellnessmotivationdaily_</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="relative text-rose-800 px-3 py-2 rounded-md text-md font-medium transition-all duration-300 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-pink-500 hover:shadow-lg hover:scale-105 transform group">
+                            <span class="relative z-10">Home</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-rose-500 to-pink-500 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                        <a href="#about" class="relative text-rose-800 px-3 py-2 rounded-md text-md font-medium transition-all duration-300 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-pink-500 hover:shadow-lg hover:scale-105 transform group">
+                            <span class="relative z-10">About</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-rose-500 to-pink-500 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                        <a href="#portfolio" class="relative text-rose-800 px-3 py-2 rounded-md text-md font-medium transition-all duration-300 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-pink-500 hover:shadow-lg hover:scale-105 transform group">
+                            <span class="relative z-10">Portfolio</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-rose-500 to-pink-500 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                        <a href="#instagram" class="relative text-rose-800 px-3 py-2 rounded-md text-md font-medium transition-all duration-300 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-pink-500 hover:shadow-lg hover:scale-105 transform group">
+                            <span class="relative z-10">Services</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-rose-500 to-pink-500 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                        <a href="#contact" class="relative text-rose-800 px-3 py-2 rounded-md text-md font-medium transition-all duration-300 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-pink-500 hover:shadow-lg hover:scale-105 transform group">
+                            <span class="relative z-10">Contact</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-rose-500 to-pink-500 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="text-rose-800 hover:text-rose-600 focus:outline-none" id="mobile-menu-button">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden gradient-bg-reverse" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="relative text-rose-800 block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-pink-500 hover:shadow-lg hover:scale-105 transform group">
+                    <div class="relative z-10 flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                        </svg>
+                        <span>Home</span>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-rose-500 to-pink-500 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="#about" class="relative text-rose-800 block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-pink-500 hover:shadow-lg hover:scale-105 transform group">
+                    <div class="relative z-10 flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>About</span>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-rose-500 to-pink-500 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="#portfolio" class="relative text-rose-800 block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-pink-500 hover:shadow-lg hover:scale-105 transform group">
+                    <div class="relative z-10 flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Portfolio</span>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-rose-500 to-pink-500 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="#instagram" class="relative text-rose-800 block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-pink-500 hover:shadow-lg hover:scale-105 transform group">
+                    <div class="relative z-10 flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v6a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2H4zm0 1h12a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z" clip-rule="evenodd"/>
+                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"/>
+                        </svg>
+                        <span>Services</span>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-rose-500 to-pink-500 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="#contact" class="relative text-rose-800 block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-pink-500 hover:shadow-lg hover:scale-105 transform group">
+                    <div class="relative z-10 flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                        </svg>
+                        <span>Contact</span>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-rose-500 to-pink-500 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <img src="Images/bggggg.png" alt="Italia Larios" class="absolute z-0 w-full h-full object-center object-cover opacity-90">
+        <div class="absolute inset-0 z-10 flex items-center justify-center">
+            <div class="text-center px-4 mt-32">
+                <div class="backdrop-blur-sm bg-white/10 rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
+                    <h1 class="animated-text allura text-6xl md:text-8xl mb-4 text-rose-700 drop-shadow-2xl">Italia Larios</h1>
+                    <p class="playfair text-xl md:text-2xl text-black/90 mb-8 drop-shadow-lg ">Romancing my 20s | Plussize Queen | Spreading Joy & Realness Daily</p>
+                    <a href="#portfolio" class="inline-block bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
+                        Enter the Glam
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-gradient-to-br from-rose-100 via-pink-200 to-orange-100 py-20 px-4 ">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-4 relative">
+                <!-- Decorative background elements -->
+                <div class="absolute inset-0 flex items-center justify-center opacity-5">
+                    <div class="w-96 h-96 rounded-full bg-gradient-to-r from-rose-200 to-pink-200"></div>
+                </div>
+                
+                <!-- Main content -->
+                <div class="relative z-10">
+                    <!-- Badge/Tag -->
+                    <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-pink-100 rounded-full mb-6">
+                        <span class="text-sm font-medium text-rose-700 tracking-wide uppercase">Get to Know</span>
+                    </div>
+                    
+                    <!-- Main heading with enhanced styling -->
+                    <h2 class="playfair text-4xl md:text-6xl  text-transparent bg-clip-text bg-gradient-to-r from-rose-800 via-rose-600 to-pink-600 mb-6 leading-tight">
+                        About Italia
+                    </h2>
+                    
+                    <!-- Enhanced decorative line with gradient and animation -->
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-12 h-0.5 bg-gradient-to-r from-transparent to-rose-300"></div>
+                        <div class="w-16 h-1 bg-gradient-to-r from-rose-400 via-rose-500 to-pink-500 mx-3 rounded-full shadow-lg"></div>
+                        <div class="w-12 h-0.5 bg-gradient-to-l from-transparent to-rose-300"></div>
+                    </div>
+                    
+                    <!-- Additional decorative elements -->
+                    <div class="flex justify-center space-x-2 mt-6">
+                        <div class="w-2 h-2 bg-rose-400 rounded-full opacity-60"></div>
+                        <div class="w-2 h-2 bg-rose-500 rounded-full"></div>
+                        <div class="w-2 h-2 bg-rose-400 rounded-full opacity-60"></div>
+                    </div>
+                </div>
+                
+                <!-- Side decorative elements -->
+                <div class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 opacity-20">
+                    <div class="w-8 h-8 border-2 border-rose-300 rounded-full"></div>
+                </div>
+                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 opacity-20">
+                    <div class="w-6 h-6 bg-rose-300 rounded-full"></div>
+                </div>
+            </div>
+            <div class="flex flex-col lg:flex-row items-stretch gap-12">
+                <div class="lg:w-2/5">
+                    <div class="relative overflow-hidden rounded-2xl glow-shadow group">
+                        <img src="Images/bio.jpg" 
+                            alt="Italia Larios" 
+                            class="w-full h-[500px] object-cover transform transition duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-rose-900/40 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <div class="bg-white/90 backdrop-blur-sm rounded-xl p-4 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                                <p class="text-rose-800 font-semibold text-sm">✨ Living the Soft Life</p>
+                                <p class="text-gray-600 text-xs mt-1">Model • Content Creator • Comedian</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-3/5 flex flex-col justify-center">
+                    <div class="space-y-6">
+                        <div class="relative">
+                            <div class="absolute -left-4 top-0 w-1 h-16 bg-gradient-to-b from-rose-500 to-rose-300 rounded-full"></div>
+                            <p class="text-lg md:text-xl mb-6 leading-relaxed text-gray-700 pl-4 md:pl-6 text-left md:text-justify">
+                                ✨ Welcome to my world of glamour, joy, and unapologetic self-love. As a plus-size queen navigating my 20s, I've embraced the <span class="text-rose-600 font-semibold">soft life philosophy</span> - prioritizing peace, pleasure, and personal growth above all else.
+                            </p>
+                        </div>
+                        <p class="text-lg mb-8 leading-relaxed text-gray-600 text-justify">
+                          I'm on a mission to spread body positivity and realness through my work as a model, content creator, and comedian. Every day is an opportunity to celebrate life's beautiful moments, and I'm here to share that journey with you.
+                        </p>
+                        <div class="bg-gradient-to-r from-rose-50 to-pink-50 rounded-2xl p-8 border border-rose-100">
+                            <p class="allura text-4xl text-rose-800 mb-6 text-center">"Spreading joy & realness daily"</p>
+                            <div class="flex flex-wrap justify-center gap-3">
+                                <span class="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white text-sm font-medium shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-xl hover:from-rose-600 hover:to-pink-600 cursor-pointer">
+                                    📍 OH | NYC
+                                </span>
+                                
+                                <span class="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white text-sm font-medium shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-xl hover:from-pink-600 hover:to-rose-600 cursor-pointer">
+                                    📸 Content Creator
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-4 pt-4 justify-center ">
+                            <div class="flex items-center space-x-2 text-gray-600">
+                                <div class="w-2 h-2 bg-rose-400 rounded-full"></div>
+                                <span class="text-sm">Body Positivity Advocate</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-gray-600">
+                                <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                                <span class="text-sm">Plus-Size Model</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-gray-600">
+                                <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                                <span class="text-sm">Wellness Enthusiast</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-4 bg-gradient-to-br from-rose-200 via-pink-300 to-orange-200">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-4 relative">
+                <!-- Decorative background elements -->
+                <div class="absolute inset-0 flex items-center justify-center opacity-5">
+                    <div class="w-96 h-96 rounded-full bg-gradient-to-r from-rose-200 to-pink-200"></div>
+                </div>
+                
+                <!-- Main content -->
+                <div class="relative z-10">
+                    <!-- Badge/Tag -->
+                    <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-pink-100 rounded-full mb-6">
+                        <span class="text-sm font-medium text-rose-700 tracking-wide uppercase">My Work</span>
+                    </div>
+                    
+                    <!-- Main heading with enhanced styling -->
+                    <h2 class="playfair text-4xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-rose-800 via-rose-600 to-pink-600 mb-6 leading-tight">
+                        Portfolio
+                    </h2>
+                    
+                    <!-- Subtitle with better typography -->
+                    <p class="text-xl md:text-2xl text-rose-700 mb-8 max-w-2xl mx-auto leading-relaxed">
+                        A glimpse into my <span class="font-semibold text-rose-800">glamorous</span> world
+                    </p>
+                    
+                    <!-- Enhanced decorative line with gradient and animation -->
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-12 h-0.5 bg-gradient-to-r from-transparent to-rose-300"></div>
+                        <div class="w-16 h-1 bg-gradient-to-r from-rose-400 via-rose-500 to-pink-500 mx-3 rounded-full shadow-lg"></div>
+                        <div class="w-12 h-0.5 bg-gradient-to-l from-transparent to-rose-300"></div>
+                    </div>
+                    
+                    <!-- Additional decorative elements -->
+                    <div class="flex justify-center space-x-2 mt-6">
+                        <div class="w-2 h-2 bg-rose-400 rounded-full opacity-60"></div>
+                        <div class="w-2 h-2 bg-rose-500 rounded-full"></div>
+                        <div class="w-2 h-2 bg-rose-400 rounded-full opacity-60"></div>
+                    </div>
+                </div>
+                
+                <!-- Side decorative elements -->
+                <div class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 opacity-20">
+                    <div class="w-8 h-8 border-2 border-rose-300 rounded-full"></div>
+                </div>
+                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 opacity-20">
+                    <div class="w-6 h-6 bg-rose-300 rounded-full"></div>
+                </div>
+            </div>
+            
+            <div class="flex justify-center mb-10">
+                <div class="inline-flex rounded-md shadow-sm">
+                    <button type="button" class="filter-btn px-4 py-2 text-sm font-medium rounded-l-lg border border-rose-200 bg-white text-rose-800 hover:bg-rose-50" data-filter="all">
+                        All
+                    </button>
+                    <button type="button" class="filter-btn px-4 py-2 text-sm font-medium border-t border-b border-rose-200 bg-white text-rose-800 hover:bg-rose-50" data-filter="campaigns">
+                        Campaigns
+                    </button>
+                    <button type="button" class="filter-btn px-4 py-2 text-sm font-medium border border-rose-200 bg-white text-rose-800 hover:bg-rose-50" data-filter="bts">
+                        BTS
+                    </button>
+                    <button type="button" class="filter-btn px-4 py-2 text-sm font-medium rounded-r-lg border border-rose-200 bg-white text-rose-800 hover:bg-rose-50" data-filter="looks">
+                        Looks
+                    </button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                <!-- Campaigns -->
+                <div class="gallery-item rounded-lg overflow-hidden relative campaigns" onclick="openLightbox('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80')">
+                    <video 
+                        src="Images/vid5.mp4" 
+                        class="w-full h-80 object-cover" 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline>
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-rose-800/60 to-transparent flex items-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <div>
+                            <h3 class="playfair text-white text-xl">Level up day by day</h3>
+                            <p class="text-rose-100">self-improvement</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- BTS -->
+                <div class="gallery-item rounded-lg overflow-hidden relative bts">
+                    <video 
+                        src="Images/vid1.mp4" 
+                        class="w-full h-80 object-cover" 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline>
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-rose-800/60 to-transparent flex items-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <div>
+                            <h3 class="playfair text-white text-xl">BTS Magic</h3>
+                            <p class="text-rose-100">Spring 2023</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Looks -->
+                <div class="gallery-item rounded-lg overflow-hidden relative looks" onclick="openLightbox('https://images.unsplash.com/photo-1539109132441-380fbf6c7d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80')">
+                    <video 
+                        src="Images/vid6.mp4" 
+                        class="w-full h-80 object-cover" 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline>
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-rose-800/60 to-transparent flex items-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <div>
+                            <h3 class="playfair text-white text-xl">Daily reminder Queens </h3>
+                            <p class="text-rose-100">Your confidence</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Campaigns -->
+                <div class="gallery-item rounded-lg overflow-hidden relative campaigns" onclick="openLightbox('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80')">
+                    <video 
+                        src="Images/vid7.mp4" 
+                        class="w-full h-80 object-cover" 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline>
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-rose-800/60 to-transparent flex items-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <div>
+                            <h3 class="playfair text-white text-xl">Studio Day</h3>
+                            <p class="text-rose-100">Spring 2023</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- BTS -->
+                <div class="gallery-item rounded-lg overflow-hidden relative bts">
+                    <video 
+                        src="Images/vid2.mp4" 
+                        class="w-full h-80 object-cover" 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline>
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-rose-800/60 to-transparent flex items-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <div>
+                            <h3 class="playfair text-white text-xl">Studio Day</h3>
+                            <p class="text-rose-100">Spring 2023</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Looks -->
+                <div class="gallery-item rounded-lg overflow-hidden relative looks">
+                    <video 
+                        src="Images/vid3.mp4" 
+                        class="w-full h-80 object-cover" 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline>
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-rose-800/60 to-transparent flex items-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <div>
+                            <h3 class="playfair text-white text-xl">Casual Chic</h3>
+                            <p class="text-rose-100">Summer 2023</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Campaigns -->
+                <div class="gallery-item rounded-lg overflow-hidden relative campaigns" onclick="openLightbox('https://scontent.fmnl3-1.fna.fbcdn.net/v/t1.15752-9/517349522_1030621482394137_6521644969359624644_n.png?stp=dst-png_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=QgWgzMkFXQUQ7kNvwFovMC9&_nc_oc=Adm316B7r1O1tPTUVcMmEVPaE7XKWgaypxpTE-XTBV8eQDSYsNr6j14uEoF_RFKCWP0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl3-1.fna&oh=03_Q7cD2wFndqGL1syO6asC0klXu1pZFmK92qr8gwbfs1IEUuOSAQ&oe=689A19DE')">
+                    <img src="https://scontent.fmnl3-1.fna.fbcdn.net/v/t1.15752-9/517349522_1030621482394137_6521644969359624644_n.png?stp=dst-png_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=QgWgzMkFXQUQ7kNvwFovMC9&_nc_oc=Adm316B7r1O1tPTUVcMmEVPaE7XKWgaypxpTE-XTBV8eQDSYsNr6j14uEoF_RFKCWP0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl3-1.fna&oh=03_Q7cD2wFndqGL1syO6asC0klXu1pZFmK92qr8gwbfs1IEUuOSAQ&oe=689A19DE" 
+                         alt="Winter Campaign" class="w-full h-80 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-rose-800/60 to-transparent flex items-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <div>
+                            <h3 class="playfair text-white text-xl">Waking up at 5 AM</h3>
+                            <p class="text-rose-100">Habits</p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Campaigns -->
+                <div class="gallery-item rounded-lg overflow-hidden relative campaigns" onclick="openLightbox('https://scontent.fmnl37-1.fna.fbcdn.net/v/t1.15752-9/515167970_1529046505146617_5294562938365389810_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=TdwFMV0SoVsQ7kNvwHk56yv&_nc_oc=Admb_iW2E6x_iBoD_vlxiAkSHjxFQLlEFis2eGKgSOe2zMVT15JhZk3R7eCSDxPQa_A&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl37-1.fna&oh=03_Q7cD2wHMUCKC_wrHL-PJGCRrZ98OUVsEbNXFZ70DUPP2wiahyA&oe=6899F65E')">
+                    <img src="https://scontent.fmnl37-1.fna.fbcdn.net/v/t1.15752-9/515167970_1529046505146617_5294562938365389810_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=TdwFMV0SoVsQ7kNvwHk56yv&_nc_oc=Admb_iW2E6x_iBoD_vlxiAkSHjxFQLlEFis2eGKgSOe2zMVT15JhZk3R7eCSDxPQa_A&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl37-1.fna&oh=03_Q7cD2wHMUCKC_wrHL-PJGCRrZ98OUVsEbNXFZ70DUPP2wiahyA&oe=6899F65E" 
+                         alt="Winter Campaign" class="w-full h-80 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-rose-800/60 to-transparent flex items-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <div>
+                            <h3 class="playfair text-white text-xl">Waking up at 5 AM</h3>
+                            <p class="text-rose-100">Habits</p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Campaigns -->
+                <div class="gallery-item rounded-lg overflow-hidden relative campaigns" onclick="openLightbox('https://scontent.fmnl3-1.fna.fbcdn.net/v/t1.15752-9/515923062_1722354658462824_4531611485525944389_n.png?_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=mKWbZSMi2dAQ7kNvwFbviPw&_nc_oc=AdmY01AwqcT-76EPi2LsqbQYkUI6KayXXyq5uG8QCU9hwYHPaJi-yXUJCSFmP55y8p8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl3-1.fna&oh=03_Q7cD2wFJj0IeKKUr4e9gEZnsihBU-TbVkK1BUQbt8faTnqZIGw&oe=6899F9D7')">
+                    <img src="https://scontent.fmnl3-1.fna.fbcdn.net/v/t1.15752-9/515923062_1722354658462824_4531611485525944389_n.png?_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=mKWbZSMi2dAQ7kNvwFbviPw&_nc_oc=AdmY01AwqcT-76EPi2LsqbQYkUI6KayXXyq5uG8QCU9hwYHPaJi-yXUJCSFmP55y8p8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl3-1.fna&oh=03_Q7cD2wFJj0IeKKUr4e9gEZnsihBU-TbVkK1BUQbt8faTnqZIGw&oe=6899F9D7" 
+                         alt="Winter Campaign" class="w-full h-80 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-rose-800/60 to-transparent flex items-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <div>
+                            <h3 class="playfair text-white text-xl">Waking up at 5 AM</h3>
+                            <p class="text-rose-100">Habits</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Lightbox -->
+        <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center hidden">
+            <div class="relative max-w-4xl w-full p-4">
+                <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white text-3xl hover:text-rose-300">&times;</button>
+                <img id="lightbox-img" src="" alt="" class="w-full max-h-screen object-contain">
+            </div>
+        </div>
+
+        <div class="text-center mt-12">
+                <a href="https://instagram.com/wellnessmotivationdaily_" target="_blank" class="inline-flex items-center bg-gradient-to-r from-rose-600 to-rose-400 hover:from-rose-700 hover:to-rose-500 text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 glow-shadow">
+                    <i class="fab fa-instagram text-xl mr-2"></i>
+                    Follow @wellnessmotivationdaily_
+                </a>
+            </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section id="instagram" class="py-20 px-4 bg-gradient-to-br from-pink-300 via-rose-200 to-orange-300">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-4 relative">
+                <!-- Decorative background elements -->
+                <div class="absolute inset-0 flex items-center justify-center opacity-5">
+                    <div class="w-96 h-96 rounded-full bg-gradient-to-r from-rose-200 to-pink-200"></div>
+                </div>
+                
+                <!-- Main content -->
+                <div class="relative z-10">
+                    <!-- Badge/Tag -->
+                    <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-pink-100 rounded-full mb-6">
+                        <span class="text-sm font-medium text-rose-700 tracking-wide uppercase">Professional Services</span>
+                    </div>
+                    
+                    <!-- Main heading with enhanced styling -->
+                    <h2 class="playfair text-4xl md:text-6xl  text-transparent bg-clip-text bg-gradient-to-r from-rose-800 via-rose-600 to-pink-600 mb-6 leading-tight">
+                        UGC Services
+                    </h2>
+                    
+                    <!-- Subtitle with better typography -->
+                    <p class="text-xl md:text-2xl text-rose-700 mb-8 max-w-2xl mx-auto leading-relaxed">
+                        Brands I have <span class="font-semibold text-rose-800">collaborated</span> with
+                    </p>
+                    
+                    <!-- Enhanced decorative line with gradient and animation -->
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-12 h-0.5 bg-gradient-to-r from-transparent to-rose-300"></div>
+                        <div class="w-16 h-1 bg-gradient-to-r from-rose-400 via-rose-500 to-pink-500 mx-3 rounded-full shadow-lg"></div>
+                        <div class="w-12 h-0.5 bg-gradient-to-l from-transparent to-rose-300"></div>
+                    </div>
+                    
+                    <!-- Additional decorative elements -->
+                    <div class="flex justify-center space-x-2 mt-6">
+                        <div class="w-2 h-2 bg-rose-400 rounded-full opacity-60"></div>
+                        <div class="w-2 h-2 bg-rose-500 rounded-full"></div>
+                        <div class="w-2 h-2 bg-rose-400 rounded-full opacity-60"></div>
+                    </div>
+                </div>
+                
+                <!-- Side decorative elements -->
+                <div class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 opacity-20">
+                    <div class="w-8 h-8 border-2 border-rose-300 rounded-full"></div>
+                </div>
+                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 opacity-20">
+                    <div class="w-6 h-6 bg-rose-300 rounded-full"></div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="instagram-post rounded-lg overflow-hidden relative group cursor-pointer">
+                    <img src="https://scontent.fmnl37-2.fna.fbcdn.net/v/t39.30808-6/515484780_1283916517070500_6806107278176763232_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGfXZv9WCpv5Ey98MPRlAB4wph_XlTr6zXCmH9eVOvrNec5A5TmjpmgefQz_ZMQscbjSZk-sTMdHNR2yhGrBCnx&_nc_ohc=n7eS_8rpoYsQ7kNvwHYfkfD&_nc_oc=AdmtyKm6LS8tZa-AG8HrbdPydpgXy_d1EaL9NjDtOq5fwGorKeuHl8g7Ewfw-_wyOOQ&_nc_zt=23&_nc_ht=scontent.fmnl37-2.fna&_nc_gid=WrNDhJK1KB1yug9a_wYf9Q&oh=00_AfRuP6Opq_RN0JhZ1jABov0zAc__26gR1E0HXtu79F-kbA&oe=6878591F" 
+                         alt="Instagram post" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                        <div class="text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fab fa-amazon text-4xl text-[#FF9900] mb-2"></i>
+                            <p class="text-lg font-semibold">Wellness Supplements</p>
+                            <p class="text-sm">Shop on Amazon</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="instagram-post rounded-lg overflow-hidden relative group cursor-pointer">
+                    <img src="https://scontent.fmnl3-3.fna.fbcdn.net/v/t39.30808-6/514198517_1283916473737171_8825034478740937658_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG9Se-B90b6F2HYGtnCcCopiCju4evz1SyIKO7h6_PVLGlREChMqIdMnRSaaIKr2YJrX-zNP-nT5jlO9QKgMlK8&_nc_ohc=daWov4YHjXIQ7kNvwEgOb96&_nc_oc=AdmV8d9tQkpofF75oKbvyOdwgx8qijA7ZMGPL0C-8wMswWkabiKcTVVkPwViAhZ_5Kw&_nc_zt=23&_nc_ht=scontent.fmnl3-3.fna&_nc_gid=QdHwMiyISA6M-yQCcgThFw&oh=00_AfQu9LQIud4vK5LhiMwc3JpBvaZDowHGDbx6mQgbFglOJA&oe=6878837F" 
+                         alt="Instagram post" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                        <div class="text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fab fa-amazon text-4xl text-[#FF9900] mb-2"></i>
+                            <p class="text-lg font-semibold">Fitness Equipment</p>
+                            <p class="text-sm">Shop on Amazon</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="instagram-post rounded-lg overflow-hidden relative group cursor-pointer">
+                    <img src="https://lh7-us.googleusercontent.com/vfuB_UvPyxRo4n2GCSvQhgdSLckJ8z5tU3xJvuQqJiE1fW3ORdirXyH9ZjCcaV5zHl1FKwAB_Eu0ooIM2y-HiVYHvonb_8z4Z4fdhTCx6Lgyne1A8TMLnqCACZbAT20Y2GgdMT5RWioO6MYsOxobkeg" 
+                         alt="Instagram post" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                        <div class="text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fab fa-amazon text-4xl text-[#FF9900] mb-2"></i>
+                            <p class="text-sm">Shop on Amazon</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="instagram-post rounded-lg overflow-hidden relative group cursor-pointer">
+                    <img src="data:image/jpeg;base64,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" 
+                         alt="Instagram post" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                        <div class="text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fab fa-amazon text-4xl text-[#FF9900] mb-2"></i>
+                            <p class="text-sm">Shop on Amazon</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="instagram-post rounded-lg overflow-hidden relative group cursor-pointer">
+                    <img src="data:image/jpeg;base64,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" 
+                         alt="Instagram post" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                        <div class="text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fab fa-amazon text-4xl text-[#FF9900] mb-2"></i>
+                            <p class="text-sm">Shop on Amazon</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="instagram-post rounded-lg overflow-hidden relative group cursor-pointer">
+                    <img src="https://scontent.fmnl3-2.fna.fbcdn.net/v/t39.30808-6/440358244_18438801295010787_5812752805414006075_n.jpg?stp=c0.119.1440.1440a_dst-jpg_s206x206_tt6&_nc_cat=100&ccb=1-7&_nc_sid=714c7a&_nc_eui2=AeF538oRvNoyAaFbkYXwxlBzZ1mmW_wtOrZnWaZb_C06tth74VoSdFAu9LaLgYExcU80HsUgl4uJrwv-aevGUMEd&_nc_ohc=IwYgWyp0YCgQ7kNvwErJLy-&_nc_oc=AdkC_fE3ZLTFCXRNpMohnlVt6uda_FDYXclW6fQYez8uwhYzGx4w2oDWBrwQz0P9LHI&_nc_zt=23&_nc_ht=scontent.fmnl3-2.fna&_nc_gid=SWTFeETgQ7lgZny5HQjE1g&oh=00_AfQkf6fQtbXjOc0zTEYy45zBmGQDPJEXKcxFv2CmlNy_DA&oe=68788E86" 
+                         alt="Instagram post" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                        <div class="text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fab fa-amazon text-4xl text-[#FF9900] mb-2"></i>
+                            <p class="text-sm">Shop on Amazon</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="instagram-post rounded-lg overflow-hidden relative group cursor-pointer">
+                    <img src="https://scontent.fmnl3-4.fna.fbcdn.net/v/t39.30808-6/439927480_18438801286010787_7218755054208736395_n.jpg?stp=c0.119.1440.1440a_dst-jpg_s206x206_tt6&_nc_cat=101&ccb=1-7&_nc_sid=714c7a&_nc_eui2=AeE28kLuvExNfcTAhcMZAx6Km9yJ5TBgy6ib3InlMGDLqJysCzew2yW7wJ9NYUItpblkKkA8l_wPAaUTF3z9QYtd&_nc_ohc=P9zgpB-6N1MQ7kNvwHfGPzR&_nc_oc=Adn6Ixxk-gQ__kWWurzmgJJSU9zlKAPyc2QseCEAOxd_Hgb-cgQisiJEdar1_g6Yj2o&_nc_zt=23&_nc_ht=scontent.fmnl3-4.fna&_nc_gid=SWTFeETgQ7lgZny5HQjE1g&oh=00_AfSj-n0iOil-CDqtweuDAs6bK7fvh0tk-HHDojaF9y4IKQ&oe=687858A3" 
+                         alt="Instagram post" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                        <div class="text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fab fa-amazon text-4xl text-[#FF9900] mb-2"></i>
+                            <p class="text-sm">Shop on Amazon</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="instagram-post rounded-lg overflow-hidden relative group cursor-pointer">
+                    <img src="https://scontent.fmnl3-4.fna.fbcdn.net/v/t39.30808-6/440068961_18438801307010787_5962149517243689281_n.jpg?stp=c0.119.1440.1440a_dst-jpg_s206x206_tt6&_nc_cat=104&ccb=1-7&_nc_sid=714c7a&_nc_eui2=AeF5bGBlJrOeqVxjdzyeuJI6xoQfpPxe79fGhB-k_F7v12mrkdvzgYEP7AZ8ie-eittWD585uyrPBUnUheHw6Mr8&_nc_ohc=1wDOpNkTEhYQ7kNvwGNBtj0&_nc_oc=AdmkjmhuDzFMTqSg9cLtnzGzoNye2EUIXwJdKnVche3et8G4BBBv5CHgK-QNoEtCCU8&_nc_zt=23&_nc_ht=scontent.fmnl3-4.fna&_nc_gid=JNajBJtMhXXgbiWNwyUiGg&oh=00_AfRIRFL6707mb9OklNhUXzWL3qpDUZE4YFiaMIHx6cr42g&oe=68785FAF" 
+                         alt="Instagram post" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                        <div class="text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fab fa-amazon text-4xl text-[#FF9900] mb-2"></i>
+                            <p class="text-sm">Shop on Amazon</p>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://amazon.com" target="_blank" class="inline-flex items-center bg-gradient-to-r from-rose-600 to-rose-400 hover:from-rose-700 hover:to-rose-500 text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 glow-shadow">
+                    <i class="fab fa-amazon text-xl mr-2"></i>
+                    Click to view more
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 px-4 bg-gradient-to-br from-pink-50 via-rose-50 to-orange-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="playfair text-4xl md:text-5xl text-rose-800 mb-4">What People Say</h2>
+                <div class="w-24 h-1 bg-rose-500 mx-auto mb-4"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Hear from those who have been inspired by Italia's journey</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-rose-100 hover:border-rose-300 hover:bg-gradient-to-br hover:from-rose-50 hover:to-pink-50 transform hover:-translate-y-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-rose-400 to-pink-400 rounded-full flex items-center justify-center text-white transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:from-rose-500 group-hover:to-pink-500">
+                             <i class="fas fa-user text-lg"></i>
+                         </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800 transition-colors duration-300 group-hover:text-rose-600 group-hover:font-bold">Sarah M.</h4>
+                            <p class="text-sm text-gray-500 transition-colors duration-300 group-hover:text-rose-500">Wellness Enthusiast</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex text-yellow-400 mb-3 transition-all duration-300 group-hover:text-yellow-500">
+                            <i class="fas fa-star transition-transform duration-200 group-hover:scale-125 hover:animate-pulse"></i>
+                            <i class="fas fa-star transition-transform duration-200 delay-75 group-hover:scale-125 hover:animate-pulse"></i>
+                            <i class="fas fa-star transition-transform duration-200 delay-150 group-hover:scale-125 hover:animate-pulse"></i>
+                            <i class="fas fa-star transition-transform duration-200 delay-225 group-hover:scale-125 hover:animate-pulse"></i>
+                            <i class="fas fa-star transition-transform duration-200 delay-300 group-hover:scale-125 hover:animate-pulse"></i>
+                        </div>
+                        <p class="text-gray-700 italic transition-colors duration-300 group-hover:text-gray-800 group-hover:font-medium">"Italia's content has completely transformed my approach to wellness and self-love. Her authentic journey and positive energy inspire me daily. The product recommendations are always spot-on and have genuinely improved my lifestyle!"</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-rose-100 hover:border-pink-300 hover:bg-gradient-to-br hover:from-pink-50 hover:to-rose-50 transform hover:-translate-y-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full flex items-center justify-center text-white transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:from-pink-500 group-hover:to-rose-500">
+                             <i class="fas fa-user text-lg"></i>
+                         </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800 transition-colors duration-300 group-hover:text-pink-600 group-hover:font-bold">Maria L.</h4>
+                            <p class="text-sm text-gray-500 transition-colors duration-300 group-hover:text-pink-500">Fitness Coach</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex text-yellow-400 mb-3 transition-all duration-300 group-hover:text-yellow-500">
+                            <i class="fas fa-star transition-transform duration-200 group-hover:scale-125 hover:animate-pulse"></i>
+                            <i class="fas fa-star transition-transform duration-200 delay-75 group-hover:scale-125 hover:animate-pulse"></i>
+                            <i class="fas fa-star transition-transform duration-200 delay-150 group-hover:scale-125 hover:animate-pulse"></i>
+                            <i class="fas fa-star transition-transform duration-200 delay-225 group-hover:scale-125 hover:animate-pulse"></i>
+                            <i class="fas fa-star transition-transform duration-200 delay-300 group-hover:scale-125 hover:animate-pulse"></i>
+                        </div>
+                        <p class="text-gray-700 italic transition-colors duration-300 group-hover:text-gray-800 group-hover:font-medium">"As a plus-size woman in the fitness industry, Italia's representation means everything to me. She shows that wellness comes in all shapes and sizes. Her motivational content keeps me going on tough days!"</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-rose-100 hover:border-orange-300 hover:bg-gradient-to-br hover:from-orange-50 hover:to-rose-50 transform hover:-translate-y-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-rose-400 to-orange-400 rounded-full flex items-center justify-center text-white transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:from-rose-500 group-hover:to-orange-500">
+                             <i class="fas fa-user text-lg"></i>
+                         </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800 transition-colors duration-300 group-hover:text-orange-600 group-hover:font-bold">Jessica R.</h4>
+                            <p class="text-sm text-gray-500 transition-colors duration-300 group-hover:text-orange-500">Content Creator</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex text-yellow-400 mb-3 transition-all duration-300 group-hover:text-yellow-500">
+                            <i class="fas fa-star transition-transform duration-200 group-hover:scale-125 hover:animate-pulse"></i>
+                            <i class="fas fa-star transition-transform duration-200 delay-75 group-hover:scale-125 hover:animate-pulse"></i>
+                            <i class="fas fa-star transition-transform duration-200 delay-150 group-hover:scale-125 hover:animate-pulse"></i>
+                            <i class="fas fa-star transition-transform duration-200 delay-225 group-hover:scale-125 hover:animate-pulse"></i>
+                            <i class="fas fa-star transition-transform duration-200 delay-300 group-hover:scale-125 hover:animate-pulse"></i>
+                        </div>
+                        <p class="text-gray-700 italic transition-colors duration-300 group-hover:text-gray-800 group-hover:font-medium">"Italia's authenticity shines through every post. She's not just promoting products - she's building a community of empowered women. Her Amazon recommendations have become my go-to shopping list!"</p>
+                    </div>
+                </div>
+            </div>
+            
+        
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-gradient-to-br from-rose-300 via-pink-200 to-orange-100">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-4">
+                <h2 class="playfair text-4xl md:text-5xl text-rose-800 mb-4">Let's Connect</h2>
+                <div class="w-24 h-1 bg-rose-500 mx-auto"></div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden glow-shadow max-w-2xl mx-auto">
+                <div class="gradient-bg p-12 text-center">
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="bg-white/80 backdrop-blur-sm rounded-xl p-4 flex items-center justify-center space-x-3 max-w-sm mx-auto">
+                            <i class="fas fa-envelope text-rose-600 text-xl"></i>
+                            <span class="text-gray-700 font-medium">hello@italialarios.com</span>
+                        </div>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-xl p-4 flex items-center justify-center space-x-3 max-w-sm mx-auto">
+                            <i class="fas fa-map-marker-alt text-rose-600 text-xl"></i>
+                            <span class="text-gray-700 font-medium">📍 Ohio | New York City</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://instagram.com/wellnessmotivationdaily_" target="_blank" class="group">
+                            <div class="w-14 h-14 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center text-white text-xl transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <p class="text-xs text-rose-700 mt-2 font-medium">Instagram</p>
+                        </a>
+                            <a href="https://www.amazon.com/shop/italianicole_/list/2VOJAW1O3PHJW?linkCode=spc&tag=kiashiahaynes-20&domainId=influencer&asc_contentid=amzn1.ideas.2VOJAW1O3PHJW" class="group block text-center">
+                            <div class="w-14 h-14 bg-[#FF9900] rounded-md flex items-center justify-center text-white text-xl transition-all duration-300 group-hover:shadow-md group-hover:scale-105">
+                                <i class="fab fa-amazon"></i>
+                            </div>
+                            <p class="text-xs text-gray-800 mt-2 font-semibold group-hover:underline">Amazon</p>
+                            </a>
+                        
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-rose-200">
+                        <p class="allura text-2xl text-rose-800 mb-2">"Ready to create magic together?"</p>
+                        <p class="text-sm text-gray-600">Available for collaborations, brand partnerships, and creative projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg-reverse py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="allura text-3xl text-rose-800 text-center">Italia Larios</span>
+                    <p class="text-sm text-rose-700 mt-2 text-center"> Content Creator | Plus-size Queen</p>
+                </div>
+            </div>
+            <div class="border-t border-rose-200 mt-8 pt-8 text-center text-rose-700">
+                <p>&copy; 2025 Italia Larios. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Gallery filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('bg-rose-800', 'text-white'));
+                
+                // Add active class to clicked button
+                this.classList.add('bg-rose-400', 'text-white');
+                
+                const filterValue = this.getAttribute('data-filter');
+                
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox functionality
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            lightboxImg.src = imageSrc;
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close lightbox when clicking outside the image
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! Italia will get back to you soon.');
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
